@@ -2,14 +2,18 @@ declared-services:
   conversation-service:
     label: conversation
     plan: free
+  weatherinsights-service:
+    label: weatherinsights
+    plan: Free-v2
   cloudantNoSQLDB-service:
     label: cloudantNoSQLDB
     plan: Lite
 applications:
 - services:
    - conversation-service
+   - weatherinsights-service
    - cloudantNoSQLDB-service
-  name: text-bot
+  name: ritika-textbot
   command: npm start
   path: .
   memory: 512M
